@@ -205,12 +205,12 @@
     <div class="content-area">
         <div id="sidebar">
             <!-- এখানে active-thumbnail ক্লাসটি ডিফল্টভাবে দেওয়া হয়েছে -->
-            <img src="DCRcopy1.jpeg" class="thumbnail active-thumbnail" alt="Thumbnail" onclick="selectThumbnail(this)">
+            <img src="DCR1.12.jpg" class="thumbnail active-thumbnail" alt="Thumbnail" onclick="selectThumbnail(this)">
             <div class="page-num">Page 1</div>
         </div>
 
         <div class="viewer">
-            <img id="documentImage" src="DCRcopy1.jpeg" class="main-img" alt="Main Document">
+            <img id="documentImage" src="DCR1.12.jpg" class="main-img" alt="Main Document">
         </div>
     </div>
 
@@ -276,7 +276,7 @@
         function downloadDocument() {
             const link = document.createElement('a');
             link.href = img.src;
-            link.download = 'DCR_Document.jpg';
+            link.download = 'DCR1.12.jpg';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
