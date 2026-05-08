@@ -148,21 +148,38 @@
             color: #f1f1f1;
             margin-left: 8px;
         }
-        /* মোবাইল ফোনের জন্য টুলবার হাইড করা */
+         
+/* মোবাইল ফোনের জন্য ফুল স্ক্রিন এবং ক্রোম ব্যাকগ্রাউন্ড */
 @media only screen and (max-width: 600px) {
     .toolbar {
-        display: none !important;
+        display: none !important; /* উপরের বার হাইড করবে */
     }
+    
+    body, html {
+        background-color: #fff8f0 !important; /* ক্রোমের ডার্ক মোড ব্যাকগ্রাউন্ড কালার */
+    }
+
     .content-area {
         height: 100% !important;
     }
-}
 
-        @media print {
-            .toolbar, #sidebar { display: none !important; }
-            .viewer { overflow: visible !important; padding: 0 !important; }
-            .main-img { box-shadow: none !important; width: 100% !important; transform: none !important; }
-        }
+    .viewer {
+        padding: 0 !important; /* সাইডের সব ফাঁকা জায়গা (Padding) রিমুভ করবে */
+        display: flex;
+        align-items: flex-start; /* ইমেজ যাতে একদম উপর থেকে শুরু হয় */
+        justify-content: center;
+        background-color: #fff8f0;
+    }
+
+    .main-img {
+        width: 100% !important; /* ফুল স্ক্রিন উইডথ */
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-shadow: none !important; /* বর্ডার শ্যাডো সরিয়ে দিলে ক্লিন দেখাবে */
+        border-radius: 0 !important;
+    }
+}
+  
     </style>
 </head>
 <body>
