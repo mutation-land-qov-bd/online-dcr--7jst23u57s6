@@ -148,6 +148,15 @@
             color: #f1f1f1;
             margin-left: 8px;
         }
+        /* মোবাইল ফোনের জন্য টুলবার হাইড করা */
+@media only screen and (max-width: 600px) {
+    .toolbar {
+        display: none !important;
+    }
+    .content-area {
+        height: 100% !important;
+    }
+}
 
         @media print {
             .toolbar, #sidebar { display: none !important; }
